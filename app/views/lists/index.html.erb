@@ -1,8 +1,21 @@
-<h1>Movie List</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+  <h1>Movie List</h1>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= link_to "Add new list", new_list_path %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Add new list", new_list_path %>
-<br>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Film_reel.jpg"%>);">
+  <div class="container">
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-<h2><%= link_to list.name, list %></h2>
-<% end %>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "Movie_genre.jpg"%>)">
+      <h2><%= link_to list.name, list %></h2>
+    </div>
+  <% end %>
+</div>

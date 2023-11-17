@@ -1,4 +1,4 @@
-<h1>Create New List</h1>
+<h1><%= @list.name %></h1>
 
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
@@ -7,4 +7,4 @@
 
 <br>
 
-<%= link_to "Back to lists", root_path %>
+<%= link_to "Back to list", list_path(@list) %>
